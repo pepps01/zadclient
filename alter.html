@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ZADECLANT ENERGY LIMITED | Oil & Gas Services</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafcfc;
+            color: #1a2a3a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header & nav */
+        header {
+            background: #0b2b26;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #FFFFFF, #c7e9e2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .logo p {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: #aad9d0;
+            margin-top: 4px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #eef5f3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: #ffcd7e;
+            border-bottom: 2px solid #ffcd7e;
+            padding-bottom: 4px;
+        }
+
+        /* hero section */
+        .hero {
+            background: linear-gradient(105deg, #0f2e2a 0%, #17443e 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1.2;
+        }
+        .hero-text h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+        .hero-badge {
+            background: #ffcd7e;
+            color: #1e3b36;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 30px;
+        }
+        .stat span {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: block;
+        }
+        .hero-image {
+            flex: 0.8;
+            background: rgba(255,255,255,0.05);
+            border-radius: 32px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(2px);
+        }
+        .hero-image i {
+            font-size: 5rem;
+            color: #ffcd7e;
+            margin-bottom: 16px;
+        }
+
+        /* section headings */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+            position: relative;
+            display: inline-block;
+            color: #0b2b26;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: #ffb347;
+            border-radius: 4px;
+        }
+        .section {
+            padding: 70px 0;
+            border-bottom: 1px solid #e0ece9;
+        }
+
+        /* cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 24px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+            border: 1px solid #e2f0ed;
+        }
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 36px -12px rgba(0,0,0,0.15);
+            border-color: #cfe6e1;
+        }
+        .service-icon {
+            font-size: 2.4rem;
+            color: #1e6b5e;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .service-card p, .service-card ul {
+            color: #2c4a44;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+        .service-card ul {
+            padding-left: 20px;
+            list-style: disc;
+        }
+        .service-card li {
+            margin: 6px 0;
+        }
+
+        .subservice-block {
+            background: #f6fbf9;
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .why-choose {
+            background: #f1f8f6;
+            border-radius: 48px;
+            padding: 48px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        .why-item {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .why-icon {
+            font-size: 2.5rem;
+            color: #1f7b6c;
+        }
+
+        /* contact */
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 32px 36px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+        .contact-info {
+            flex: 1;
+        }
+        .contact-info i {
+            width: 36px;
+            color: #1e6b5e;
+            font-size: 1.4rem;
+            margin-right: 14px;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .contact-detail span {
+            font-weight: 500;
+        }
+        .map-placeholder {
+            flex: 1;
+            background: #eef3f1;
+            border-radius: 32px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        footer {
+            background: #0b2b26;
+            color: #cddfdb;
+            padding: 36px 0;
+            text-align: center;
+        }
+
+        .btn-outline-light {
+            border: 1px solid #ffcd7e;
+            background: transparent;
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            transition: 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-outline-light:hover {
+            background: #ffcd7e;
+            color: #0b2b26;
+        }
+
+        @media (max-width: 800px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/images/logo.jpg" class="h-10 w-full object-cover  rounded">
+                <p>Global Reach… Local Impact!</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="hero-badge"><i class="fas fa-hard-hat"></i> Indigenous Oil & Gas Excellence</div>
+                <h2>Powering upstream success <br>with integrity & innovation</h2>
+                <p>ZADECLANT ENERGY LIMITED delivers specialized exploration & production support services across Nigeria's energy sector — from exploration to asset optimization.</p>
+                <a href="#services" class="btn-outline-light"><i class="fas fa-arrow-right"></i> Explore our services</a>
+                <div class="hero-stats">
+                    <div class="stat"><span>100+</span> Projects Executed</div>
+                    <div class="stat"><span>15+</span> Industry Partners</div>
+                    <div class="stat"><span>QHSE</span> Certified</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-oil-can"></i>
+                <i class="fas fa-charging-station" style="margin-left: 20px;"></i>
+                <i class="fas fa-industry"></i>
+                <p style="margin-top: 20px; font-size: 0.9rem;">Engineering • Drilling • Integrity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About ZADECLANT ENERGY</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 32px;">
+                <div style="flex: 2;">
+                    <p style="font-size: 1.1rem; margin-bottom: 20px; line-height: 1.5;"><strong>Zadeclant Energy Limited</strong> is an indigenous oil and gas services company focused on delivering specialized exploration and production (E&P) support services to upstream operators.</p>
+                    <p style="margin-bottom: 20px;">The company is positioned to provide technical, operational, and project support solutions across the lifecycle of oil and gas assets — from exploration through field development to production optimization.</p>
+                    <p style="margin-bottom: 20px;">Zadeclant integrates engineering expertise, field experience, and cost-efficient execution models to support operators in maximizing asset value while managing operational risks.</p>
+                    <div style="display: flex; gap: 20px; margin-top: 28px;">
+                        <div><i class="fas fa-check-circle" style="color:#1e6b5e;"></i> ISO & QHSE Standards</div>
+                        <div><i class="fas fa-check-circle" style="color:#1e6b5e;"></i> Local Content Compliance</div>
+                    </div>
+                </div>
+                <div style="flex: 1; background: #eef3f1; border-radius: 32px; padding: 28px; text-align: center;">
+                    <i class="fas fa-globe-africa" style="font-size: 3rem; color: #1f7b6c;"></i>
+                    <h3 style="margin: 16px 0 8px;">Nigerian Indigenous</h3>
+                    <p>Driving local value & energy sustainability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services MAIN -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Core Services</h2>
+            <div class="cards-grid">
+                <div class="service-card"><i class="fas fa-map service-icon"></i><h3>Exploration Support</h3><p>Field development planning, well coordination, geological data support, logistics for exploration campaigns.</p></div>
+                <div class="service-card"><i class="fas fa-tools service-icon"></i><h3>Drilling & Well Services</h3><p>Drilling operations support, wellsite services, procurement of drilling materials & consumables.</p></div>
+                <div class="service-card"><i class="fas fa-chart-line service-icon"></i><h3>Production Operations</h3><p>Production optimization, well intervention, surface facility support & monitoring systems.</p></div>
+                <div class="service-card"><i class="fas fa-shield-alt service-icon"></i><h3>Asset Integrity & Maintenance</h3><p>Pipeline integrity, inspection & preventive maintenance, corrosion monitoring services.</p></div>
+                <div class="service-card"><i class="fas fa-drafting-compass service-icon"></i><h3>Engineering & Project Services</h3><p>EPC, project management, civil/structural works, piling & geotechnical engineering.</p></div>
+                <div class="service-card"><i class="fas fa-truck-ramp-box service-icon"></i><h3>Procurement & Supply Chain</h3><p>Strategic sourcing oilfield equipment, marine logistics, lifting ops, inventory optimization.</p></div>
+                <div class="service-card"><i class="fas fa-leaf service-icon"></i><h3>Environmental Services</h3><p>Offshore/onshore surveying, EIA, waste management, ESG advisory & compliance.</p></div>
+            </div>
+
+            <!-- Detailed breakdowns from image content -->
+            <div style="margin-top: 48px;">
+                <h3 style="font-size: 1.6rem; color:#0b2b26; margin-bottom: 24px;">Specialized service breakdown</h3>
+                <div class="cards-grid">
+                    <div class="subservice-block">
+                        <i class="fas fa-globe" style="font-size: 2rem; color:#1f7b6c;"></i>
+                        <h4 style="margin: 12px 0;">Exploratory Support Services</h4>
+                        <ul><li>Field development planning support</li><li>Well planning coordination & technical advisory</li><li>Geological and operational data support services</li><li>Logistics coordination for exploration campaigns</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-hard-hat"></i>
+                        <h4 style="margin: 12px 0;">Drilling & Well Services Support</h4>
+                        <ul><li>Drilling operations support</li><li>Wellsite services</li><li>Procurement and supply of drilling materials and consumables</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-cogs"></i>
+                        <h4 style="margin: 12px 0;">Production Operations Support</h4>
+                        <ul><li>Production optimization support</li><li>Well intervention (technical partnerships)</li><li>Surface facility support services</li><li>Production monitoring & reporting systems</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-chart-simple"></i>
+                        <h4 style="margin: 12px 0;">Asset Integrity & Maintenance</h4>
+                        <ul><li>Pipeline and flowline integrity support</li><li>Inspection & maintenance</li><li>Preventive maintenance program development</li><li>Corrosion monitoring support services</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-bridge"></i>
+                        <h4 style="margin: 12px 0;">Engineering & Project Services</h4>
+                        <ul><li>Engineering, procurement & construction (EPC)</li><li>Project management for process facilities</li><li>Civil & structural works</li><li>Piling & geotechnical engineering</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-ship"></i>
+                        <h4 style="margin: 12px 0;">Procurement & Supply Chain</h4>
+                        <ul><li>Strategic sourcing & procurement of oilfield equipment</li><li>Project and marine logistics</li><li>Lifting operations and support</li><li>Inventory optimization for field operations</li></ul>
+                    </div>
+                    <div class="subservice-block">
+                        <i class="fas fa-seedling"></i>
+                        <h4 style="margin: 12px 0;">Environmental Services</h4>
+                        <ul><li>Surveying (Offshore & Onshore)</li><li>Environmental Impact Assessment</li><li>Environmental Compliance & Advisory</li><li>Waste Management & Remediation</li><li>Sustainability & ESG Support</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why choose Zadeclant -->
+    <section id="why" class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Zadeclant?</h2>
+            <div class="why-choose">
+                <div class="why-item"><div class="why-icon"><i class="fas fa-chalkboard-user"></i></div><div><strong>Proven industry expertise</strong><br>Successful project execution track record</div></div>
+                <div class="why-item"><div class="why-icon"><i class="fas fa-handshake"></i></div><div><strong>Strong supplier networks</strong><br>Cost optimization & strategic sourcing</div></div>
+                <div class="why-item"><div class="why-icon"><i class="fas fa-warehouse"></i></div><div><strong>Fully equipped facilities</strong><br>Modern infrastructure & resources</div></div>
+                <div class="why-item"><div class="why-icon"><i class="fas fa-clipboard-list"></i></div><div><strong>Commitment to QHSE</strong><br>Regulatory compliance & on-time delivery</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <div class="contact-detail"><i class="fas fa-map-marker-alt"></i><span><strong> Address:</strong> 11, Hon. Temple Amadi Avenue, GRA Phase III, Port Harcourt, Rivers State</span></div>
+                    <div class="contact-detail"><i class="fas fa-phone-alt"></i><span><strong>Phone:</strong> +2347047837302</span></div>
+                    <div class="contact-detail"><i class="fas fa-envelope"></i><span><strong>Email:</strong> info@zadepcoenergy.org &nbsp;|&nbsp; info@zadepcoenergy.com</span></div>
+                    <div class="contact-detail"><i class="fas fa-globe"></i><span><strong>Website:</strong> www.zadepcoenergy.com</span></div>
+                    <div style="margin-top: 32px;">
+                        <a href="mailto:info@zadepcoenergy.com" style="background:#1e6b5e; color:white; padding:12px 28px; border-radius:40px; text-decoration:none; display:inline-block;"><i class="fas fa-paper-plane"></i> Send Inquiry</a>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-pin" style="font-size: 2.4rem; color:#1e6b5e;"></i>
+                    <p style="margin: 20px 0 12px;"><strong>Port Harcourt, Nigeria</strong></p>
+                    <p>GRA Phase III — Headquarters</p>
+                    <div style="margin-top: 28px; background:#d9eae5; border-radius: 28px; padding: 12px;"><i class="fas fa-clock"></i> Mon-Fri: 8am - 5pm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 ZADECLANT ENERGY LIMITED — Indigenous Oil & Gas Service Provider | Delivering upstream excellence</p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">📍 11, Hon. Temple Amadi Avenue, GRA Phase III, Port Harcourt, Rivers State</p>
+    </div>
+</footer>
+
+<!-- smooth scroll behavior -->
+<script>
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if(href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+    // tiny additional: handle hero button
+    const heroBtn = document.querySelector('.hero-text .btn-outline-light');
+    if(heroBtn) {
+        heroBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const servicesSection = document.querySelector('#services');
+            if(servicesSection) servicesSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+</script>
+</body>
+</html>
