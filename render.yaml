@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: zadclient
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
